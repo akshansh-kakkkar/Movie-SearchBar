@@ -49,6 +49,107 @@
       "category": "Superhero",
       "tags": ["Multiverse", "Marvel", "Spider-Man"],
       "favorite": false
-    }
+    },
+    {
+  "id": 6,
+  "title": "Doctor Strange",
+  "year": 2016,
+  "genre": "Action",
+  "rating": 7.5,
+  "category": "Superhero",
+  "tags": ["Marvel", "Magic", "Multiverse"],
+  "favorite": false
+},
+{
+  "id": 7,
+  "title": "Tenet",
+  "year": 2020,
+  "genre": "Sci-Fi",
+  "rating": 7.3,
+  "category": "Mind-Bending",
+  "tags": ["Time", "Spy", "Inversion"],
+  "favorite": false
+},
+{
+  "id": 8,
+  "title": "Black Panther",
+  "year": 2018,
+  "genre": "Action",
+  "rating": 7.3,
+  "category": "Superhero",
+  "tags": ["Marvel", "Wakanda", "King"],
+  "favorite": true
+},
+{
+  "id": 9,
+  "title": "The Matrix",
+  "year": 1999,
+  "genre": "Sci-Fi",
+  "rating": 8.7,
+  "category": "Mind-Bending",
+  "tags": ["Simulation", "AI", "Reality"],
+  "favorite": true
+},
+{
+  "id": 10,
+  "title": "Thor: Ragnarok",
+  "year": 2017,
+  "genre": "Action",
+  "rating": 7.9,
+  "category": "Superhero",
+  "tags": ["Marvel", "Asgard", "Comedy"],
+  "favorite": false
+},
+{
+  "id": 11,
+  "title": "Iron Man",
+  "year": 2008,
+  "genre": "Action",
+  "rating": 7.9,
+  "category": "Superhero",
+  "tags": ["Marvel", "Tech", "Suit"],
+  "favorite": true
+},
+{
+  "id": 12,
+  "title": "Avatar",
+  "year": 2009,
+  "genre": "Sci-Fi",
+  "rating": 7.8,
+  "category": "Adventure",
+  "tags": ["Alien", "Planet", "War"],
+  "favorite": false
+},
+{
+  "id": 13,
+  "title": "Dune",
+  "year": 2021,
+  "genre": "Sci-Fi",
+  "rating": 8.0,
+  "category": "Adventure",
+  "tags": ["Desert", "Politics", "Future"],
+  "favorite": true
+},
+{
+  "id": 14,
+  "title": "Guardians of the Galaxy",
+  "year": 2014,
+  "genre": "Action",
+  "rating": 8.0,
+  "category": "Adventure",
+  "tags": ["Marvel", "Space", "Team"],
+  "favorite": false
+},
+{
+  "id": 15,
+  "title": "Captain America: Civil War",
+  "year": 2016,
+  "genre": "Action",
+  "rating": 7.8,
+  "category": "Superhero",
+  "tags": ["Marvel", "Avengers", "Conflict"],
+  "favorite": true
+}
+
   ]
 }
