@@ -32,8 +32,8 @@ const MoviesLibrary = () => {
 
   return (
     <>
-      <div className="min-h-full bg-gray-100 pt-12 px-5 ">
-        <div className="min-h-150  min-w-90 bg-white rounded-2xl p-12 shadow-1">
+      <div className="min-h-screen bg-gray-100 pt-12 px-5 ">
+        <div className="min-h-150  min-w-90  bg-white rounded-2xl p-12 shadow-1">
           <div className="flex justify-between place-items-baseline">
             <div className="flex flex-col gap-1 ">
               <h1 className=" text-3xl font-semibold Roboto">Movie Explorer</h1>
@@ -44,7 +44,7 @@ const MoviesLibrary = () => {
             </div>
             <div className="flex">
               <p className="Poppins tracking-wide text-sm text-gray-600">
-                Local Data • React state ready{" "}
+                Local Data • React state ready
               </p>
             </div>
           </div>
@@ -92,26 +92,42 @@ const MoviesLibrary = () => {
                 SearchBar.map((Movie) => (
                   <div
                     key={Movie.id}
-                    className="flex bg-blue-100  gap-4 m-3 hover:scale-1.2 hover:-translate-y-1 transition-all duration-300 flex-row shadow-1 min-w-170 max-w-170 min-h-20 max-h-20 items-center p-5 rounded-2xl   "
+                    className=" bg-blue-100  gap-4 m-3 hover:scale-1.2 hover:-translate-y-1 transition-all duration-300  shadow-1 min-w-170 max-w-170 min-h-25 max-h-25 items-center p-5 rounded-2xl   "
                   >
-                    <div>
-                      <h1>{Movie.title}</h1>
-                      <p>{Movie.year}</p>
-                      <p>{Movie.genre}</p>
+                    <div className="flex gap-6  items-center">
+                      <h1 className="font-serif text-lg font-semibold">
+                        {Movie.title}
+                      </h1>
+                      <p className="Poppins text-gray-500">{Movie.year}</p>
+                      <p className="Poppins text-gray-600">{Movie.genre}</p>
                     </div>
-                    <div>
-                      <div>
-                        <div>{Movie.rating}</div>
-                        <div>{Movie.category}</div>
-                        <div>{Movie.tags.join("•")}</div>
-                        <div>
+                    <div className="flex justify-between m-1">
+                      <div className="flex gap-5 items-center my-2">
+                        <div className="flex gap-3 items-center   bg-yellow-200 px-3 py-1  rounded-2xl ">
                           <img
                             src="/assets/star.svg"
                             className="w-5"
-                            onClick={() => togglefavourite(Movie)}
-                            alt=""
+                            alt="rating-icon"
                           />
+                          {Movie.rating}
                         </div>
+                        <div className="bg-white rounded-2xl px-3 py-1 items-center Poppins font-semibold text-gray-600">
+                          {Movie.category}
+                        </div>
+                        <div className="text-gray-600 Poppins">
+                          {Movie.tags.join(" • ")}
+                        </div>
+                      </div>
+                      <div
+                        className="flex gap-4 items-center -translate-y-6 Poppins font-semibold transition-all duration-300 text-white hover:bg-red-500 bg-[#ff00009a] rounded-2xl p-2"
+                        onClick={() => togglefavourite(Movie)}
+                      >
+                        <img
+                          src="/assets/heart.svg"
+                          className="w-8"
+                          alt="favorite-icon"
+                        />
+                        <span>Favorite</span>
                       </div>
                     </div>
                   </div>
@@ -131,39 +147,56 @@ const MoviesLibrary = () => {
           </div>
         </div>
 
-        <h2 className="flex justify-center font-bold m-5 text-2xl">
+        <h2 className="flex justify-center font-bold m-5 Roboto text-3xl">
           Movies Library
         </h2>
-        <div className="sm:grid sm:grid-cols-4">
-          {movies.map((Movie) => (
-            <div
-              key={Movie.id}
-              className="flex bg-blue-50 gap-4 m-4 justify-around hover:scale-1.2 hover:-translate-y-1 transition-all duration-300 flex-row shadow-1 min-w-90 max-w-90 min-h-25 max-h-25 items-center p-5 rounded-2xl   "
-            >
-              <div>
-                <h1>{Movie.title}</h1>
-                <p>{Movie.year}</p>
-                <p>{Movie.genre}</p>
-              </div>
-              <div>
-                <div>
-                  <div>{Movie.rating}</div>
-                  <div>{Movie.category}</div>
-                  <div>{Movie.tags.join("•")}</div>
-                  <div>
-                    <img
-                      src="/assets/star.svg"
-                      className="w-5"
+          <div className="grid grid-cols-2">
+            {movies &&
+              movies.map((Movie) => (
+                <div
+                  key={Movie.id}
+                  className=" bg-blue-100  gap-4 m-3 hover:scale-1.2 hover:-translate-y-1 transition-all duration-300  shadow-1 min-w-170 max-w-170 min-h-25 max-h-25 items-center p-5 rounded-2xl   "
+                >
+                  <div className="flex gap-6  items-center">
+                    <h1 className="font-serif text-lg font-semibold">
+                      {Movie.title}
+                    </h1>
+                    <p className="Poppins text-gray-500">{Movie.year}</p>
+                    <p className="Poppins text-gray-600">{Movie.genre}</p>
+                  </div>
+                  <div className="flex justify-between m-1">
+                    <div className="flex gap-5 items-center my-2">
+                      <div className="flex gap-3 items-center   bg-yellow-200 px-3 py-1  rounded-2xl ">
+                        <img
+                          src="/assets/star.svg"
+                          className="w-5"
+                          alt="rating-icon"
+                        />
+                        {Movie.rating}
+                      </div>
+                      <div className="bg-white rounded-2xl px-3 py-1 items-center Poppins font-semibold text-gray-600">
+                        {Movie.category}
+                      </div>
+                      <div className="text-gray-600 Poppins">
+                        {Movie.tags.join(" • ")}
+                      </div>
+                    </div>
+                    <div
+                      className="flex gap-4 items-center -translate-y-6 Poppins font-semibold transition-all duration-300 text-white hover:bg-red-500 bg-[#ff00009a] rounded-2xl p-2"
                       onClick={() => togglefavourite(Movie)}
-                      alt=""
-                    />
+                    >
+                      <img
+                        src="/assets/heart.svg"
+                        className="w-8"
+                        alt="favorite-icon"
+                      />
+                      <span>Favorite</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              ))}
+          </div>
         </div>
-      </div>
     </>
   );
 };
