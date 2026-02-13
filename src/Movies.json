@@ -1,0 +1,54 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "year": 2010,
+      "genre": "Sci-Fi",
+      "rating": 8.8,
+      "category": "Mind-Bending",
+      "tags": ["Dream", "Heist", "Subconscious"],
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "title": "The Dark Knight",
+      "year": 2008,
+      "genre": "Action",
+      "rating": 9.0,
+      "category": "Superhero",
+      "tags": ["Batman", "Crime", "Gotham"],
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "genre": "Action",
+      "rating": 8.4,
+      "category": "Superhero",
+      "tags": ["Marvel", "Time Travel", "Battle"],
+      "favorite": true
+    },
+    {
+      "id": 4,
+      "title": "Interstellar",
+      "year": 2014,
+      "genre": "Sci-Fi",
+      "rating": 8.6,
+      "category": "Adventure",
+      "tags": ["Space", "Time", "Survival"],
+      "favorite": true
+    },
+    {
+      "id": 5,
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "genre": "Action",
+      "rating": 8.2,
+      "category": "Superhero",
+      "tags": ["Multiverse", "Marvel", "Spider-Man"],
+      "favorite": false
+    }
+  ]
+}
