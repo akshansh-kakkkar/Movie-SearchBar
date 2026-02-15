@@ -149,23 +149,23 @@ const MoviesLibrary = () => {
               {SearchBar.map((Movie) => (
                 <div
                   key={Movie.id}
-                  className={` gap-4  my-2  hover:scale-[96%] hover:-translate-y-1 transition-all duration-300  shadow-1 md:min-w-170 dm:max-w-170 dm;min-h-25 md:max-h-25 items-center p-5 rounded-2xl   ${theme ? "bg-gray-300" : "bg-blue-100"}`}
+                  className={` gap-4  my-2  hover:scale-[96%] hover:-translate-y-1 transition-all duration-300  shadow-1 md:min-w-170 dm:max-w-170 dm;min-h-25 md:max-h-25 items-center p-5 rounded-2xl   ${theme ? "bg-[#9494942d]" : "bg-blue-100"}`}
                 >
                   <div
-                    className={`flex gap-6 line-clamp-1 flex-row  items-center ${theme ? "text-black" : "text-black"}`}
+                    className={`flex gap-6 line-clamp-1 flex-row  items-center ${theme ? "text-gray-100" : "text-black"}`}
                   >
                     <h1
-                      className={`font-serif  max-w-[50%] truncate text-nowrap text-lg font-semibold ${theme ? "text-black" : "text-black"}`}
+                      className={`font-serif  max-w-[50%] truncate text-nowrap text-lg font-semibold ${theme ? "text-gray-100" : "text-black"}`}
                     >
                       {Movie.title}
                     </h1>
                     <p
-                      className={`Poppins ${theme ? "text-gray-500" : "text-gray-500"}`}
+                      className={`Poppins ${theme ? "text-gray-300" : "text-gray-500"}`}
                     >
                       {Movie.year}
                     </p>
                     <p
-                      className={`Poppins ${theme ? "text-gray-500" : "text-gray-500"}`}
+                      className={`Poppins ${theme ? "text-gray-300" : "text-gray-500"}`}
                     >
                       {Movie.genre}
                     </p>
@@ -183,7 +183,7 @@ const MoviesLibrary = () => {
                       <div className="bg-white rounded-2xl px-3 py-1 items-center Poppins font-semibold text-gray-600">
                         {Movie.category}
                       </div>
-                      <div className="text-gray-600 Poppins">
+                      <div className={`Poppins ${theme ? "text-gray-300" : "text-gray-600"}`}>
                         {Movie.tags.join(" • ")}
                       </div>
                     </div>
